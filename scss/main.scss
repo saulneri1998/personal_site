@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -47,7 +48,7 @@ a {
 
 //secondary
 .text-secondary {
-  color: $secondary-color;
+  color: $secondary-text-color;
 }
 
 //main
@@ -62,7 +63,7 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: $secondary-color;
+        color: $secondary-text-color;
         @include easeIn();
       }
     }
