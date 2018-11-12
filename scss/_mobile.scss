@@ -1,9 +1,22 @@
 //Huge screens
 @include mediaXL {
+  .about-info {
+    margin-top: 60px;
+    display: grid;
+    grid-column-gap: 100px;
+    grid-row-gap: 80px;
+    grid-template-areas:
+      "bioimage bio bio"
+      "job1 job2 job3";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 //computers
 @include mediaLg {
+  .about-info {
+    margin-top: 0px;
+  }
 }
 
 //tablets
@@ -47,13 +60,38 @@
       }
     }
   }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
+
+  .bio-image {
+    width: 200px;
+    height: 200px;
+    margin: 1.5rem auto auto auto;
+  }
 }
 
 //phones
 @include mediaSm {
   body {
     main#home h1 {
-      margin-top: 7vh;
+      margin-top: 9vh;
     }
+    main#about h1 {
+      margin-top: 9vh;
+    }
+  }
+  main {
+    padding: 1.3rem;
+  }
+
+  .bio-image {
   }
 }
