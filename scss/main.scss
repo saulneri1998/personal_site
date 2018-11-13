@@ -81,6 +81,8 @@ main {
   }
 }
 
+//about me
+
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -117,6 +119,49 @@ main {
 .job-3 {
   grid-area: job3;
 }
+
+// projects
+.projects {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  img {
+    width: 100%;
+    border: 4px solid white;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.85;
+      border-color: $secondary-color;
+      @include easeIn;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: white;
+  }
+}
+.btn-dark {
+  @extend .btn;
+  background: darken($color: $primary-color, $amount: 15);
+  color: white;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($color: $primary-color, $amount: 15);
+  color: white;
+}
+
+// footer
 
 .main-footer {
   text-align: center;
